@@ -220,3 +220,406 @@ input {
     padding: 24px;
   }
 }
+
+/* ---------- 核验台扩展样式 ---------- */
+
+.hero {
+  min-height: auto;
+}
+
+.hero .saved-at {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 4px 0 0;
+  color: #64748b;
+}
+
+.hero .saved-at button {
+  min-height: 30px;
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.metrics article small + small {
+  display: block;
+  margin-top: 6px;
+}
+
+.metric-pending {
+  border-top-color: var(--accent) !important;
+}
+
+.metric-out {
+  border-top-color: #b91c1c !important;
+}
+
+.panel {
+  margin-bottom: 18px;
+}
+
+.panel-pending {
+  border-left: 5px solid var(--accent);
+}
+
+.panel-out {
+  border-left: 5px solid #b91c1c;
+}
+
+.hint {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.chips button.chip-on {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.span-2 {
+  grid-column: 1 / -1;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 10px 12px;
+  font: inherit;
+  resize: vertical;
+}
+
+.error {
+  margin: 12px 0 0;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.empty {
+  margin: 0;
+  padding: 18px;
+  color: #64748b;
+  text-align: center;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+}
+
+/* 状态徽标 */
+
+.badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge-valid {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.badge-pending {
+  color: #c2410c;
+  background: #ffedd5;
+}
+
+.badge-out {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+/* 速度榜 */
+
+.rank-list {
+  display: grid;
+  gap: 10px;
+}
+
+.rank-row {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+.rank-row b {
+  display: grid;
+  place-items: center;
+  height: 44px;
+  border-radius: 8px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--primary), #3b82f6);
+}
+
+.rank-row h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.rank-row p {
+  margin: 0;
+  color: #526071;
+}
+
+/* 上报记录卡 */
+
+.flight-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.flight-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbfdff;
+  padding: 16px;
+}
+
+.flight-card.status-pending {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  background: color-mix(in srgb, var(--accent) 4%, #ffffff);
+}
+
+.flight-card.status-out {
+  border-color: #fecaca;
+  background: #fffafa;
+}
+
+.flight-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.flight-head strong {
+  font-size: 15px;
+}
+
+.flight-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.flight-stats b {
+  color: #172033;
+}
+
+/* 时间链 */
+
+.chain {
+  display: grid;
+  gap: 0;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.chain li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  padding-bottom: 14px;
+}
+
+.chain li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 14px;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.chain li.chain-gap:not(:last-child)::before {
+  background: repeating-linear-gradient(to bottom, var(--accent) 0 5px, transparent 5px 10px);
+}
+
+.chain-dot {
+  z-index: 1;
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.chain-gap .chain-dot {
+  background: var(--accent);
+}
+
+.chain strong {
+  font-size: 14px;
+}
+
+.chain em {
+  font-style: normal;
+  color: #64748b;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.chain small {
+  display: block;
+  margin-top: 2px;
+  color: #64748b;
+}
+
+.chain small.gap-text {
+  color: #c2410c;
+  font-weight: 700;
+}
+
+/* 操作区 */
+
+.actions {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 10px;
+  padding: 12px;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.action-row label {
+  flex: 1 1 200px;
+}
+
+.action-row label.grow {
+  flex: 2 1 260px;
+}
+
+.action-row button {
+  padding: 0 14px;
+}
+
+/* 履历 */
+
+.logs,
+.card-logs {
+  margin-top: 6px;
+}
+
+.logs summary,
+.card-logs summary {
+  cursor: pointer;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.logs ul,
+.card-logs ul {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.logs li,
+.card-logs li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: baseline;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.logs time,
+.card-logs time {
+  color: #64748b;
+  font-variant-numeric: tabular-nums;
+}
+
+.logs li b,
+.card-logs li b {
+  color: var(--primary);
+}
+
+.logs li span,
+.card-logs li span {
+  color: #526071;
+}
+
+.logs li em {
+  font-style: normal;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.logs li em.status-changed {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* 鸽档案 */
+
+.archive-list {
+  display: grid;
+  gap: 16px;
+}
+
+.pigeon-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  background: #fbfdff;
+}
+
+.pigeon-card > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pigeon-card h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+
+.pigeon-card header p {
+  margin: 0;
+  color: #526071;
+}
+
+.health-edit input {
+  width: 160px;
+  min-height: 36px;
+}
+
