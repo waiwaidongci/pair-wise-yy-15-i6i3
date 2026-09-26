@@ -208,6 +208,89 @@ input {
   line-height: 1.6;
 }
 
+.tag {
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--secondary) 14%, #ffffff);
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge {
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge.ok {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge.pending {
+  background: color-mix(in srgb, var(--accent) 18%, #ffffff);
+  color: #c2410c;
+}
+
+.badge.missing {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.chip-active {
+  background: var(--primary) !important;
+  color: #ffffff;
+  border-color: var(--primary) !important;
+}
+
+.empty {
+  color: #64748b;
+  margin: 0;
+}
+
+.pending-card {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border)) !important;
+}
+
+.fix-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.fix-row label {
+  min-width: 210px;
+}
+
+.fix-row button {
+  padding: 0 14px;
+}
+
+.history {
+  margin: 10px 0 0;
+  padding: 10px 14px;
+  border-left: 3px solid var(--secondary);
+  background: #f1f5f9;
+  border-radius: 6px;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  color: #475569;
+}
+
+.history em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--primary);
+}
+
 @media (max-width: 860px) {
   .metrics,
   .workspace,
